@@ -7,3 +7,4 @@ script:
 - javac *.java
 - java RouterCheck simpleTest.csv
 - java RouterCheck difficultTest.csv
+- java RouterCheck sample.csv
