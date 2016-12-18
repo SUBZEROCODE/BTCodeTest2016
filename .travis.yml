@@ -5,5 +5,5 @@ jdk:
 - openjdk6
 script: 
 - javac *.java
-- java RouterCheck simpleTest
-- java RouterCheck difficultTest
+- java RouterCheck simpleTest.csv
+- java RouterCheck difficultTest.csv
