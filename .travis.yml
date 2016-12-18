@@ -4,6 +4,6 @@ jdk:
 - oraclejdk7
 - openjdk6
 script: 
--javac *.java
+- javac *.java
 - java RouterCheck simpleTest
 - java RouterCheck difficultTest
