@@ -9,5 +9,5 @@ script:
 - java RouterCheck difficultTest.csv
 - java RouterCheck sample.csv
 
-- mvn install -DfinalName=mvnciintegration
+- mvn clean install -DfinalName=mvnciintegration
 - mvn test
