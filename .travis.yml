@@ -6,11 +6,8 @@ jdk:
 script:
 - cd src
 - javac *.java
-- java RouterCheck simpleTest.csv
-- java RouterCheck difficultTest.csv
-- java RouterCheck sample.csv
+- java RouterCheck simpleTests.csv
+- java RouterCheck difficultTests.csv
+- java RouterCheck sampleTests.csv
 
-- cd ..
-- cd tests
-- javac JUnitTests.java
-- java JUnitTests
+- mvn tests
