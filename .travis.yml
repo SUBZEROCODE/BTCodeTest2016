@@ -9,6 +9,5 @@ script:
 - java RouterCheck simpleTests.csv
 - java RouterCheck difficultTests.csv
 - java RouterCheck sampleTests.csv
-
--cd ..
+- cd ..
 - mvn tests
