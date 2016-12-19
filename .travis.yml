@@ -3,11 +3,13 @@ jdk:
 - oraclejdk8
 - oraclejdk7
 - openjdk6
-script: 
+script:
+- cd src
 - javac *.java
 - java RouterCheck simpleTest.csv
 - java RouterCheck difficultTest.csv
 - java RouterCheck sample.csv
 
+- cd ..
 - mvn clean install -DfinalName=mvnciintegration
 - mvn test
