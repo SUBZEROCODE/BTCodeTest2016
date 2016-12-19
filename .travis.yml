@@ -13,3 +13,6 @@ script:
 - cd ..
 - mvn clean install -DfinalName=mvnciintegration
 - mvn test
+- cd tests
+- javac JUnitTests.java
+- java JUnitTests
