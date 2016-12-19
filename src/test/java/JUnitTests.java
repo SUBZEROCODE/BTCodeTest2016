@@ -1,28 +1,32 @@
 import org.junit.Test;
-import org.junit.ComparisonFailure;
 import static org.junit.Assert.assertEquals;
 
-public class JUnitTests{
+public class UnitTests{
 	
 	public static void runtests(){
 
-		junitTest1();
+		Boolean test1Result = junitTest1();
 
 	}
 
-	public static void junitTest1(){
+      @Test
+	public static Boolean junitTest1(){
 
-      try{
-            String expectedResult = "Junit is working fine";
-            assertEquals("Junit is working finet",expectedResult);
-      }
-      catch(ComparisonFailure e){
-        System.err.println("assertequals fail");
-      }
+	     String expectedResult = "Junit is working fine";
+            Boolean testResult =  assertEquals("Junit is working fine",str);
 
+            if(testResult == true){
+      	     System.out.println("Tests passed");
+            }
 
-         // /  assertEquals("Mistake",1);
+            else{
+            	System.out.println("Failure in JUnit test 1");
+            }
 
-      }
+            System.out.println("Result of testing:" + result);
+
+            return result;
+
+      	}
 
 }
