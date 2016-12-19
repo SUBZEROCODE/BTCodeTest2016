@@ -14,7 +14,7 @@ public class JUnitTests{
 
       try{
             String expectedResult = "Junit is working fine";
-             assertEquals("Junit is working finet",expectedResult);
+            assertEquals("Junit is working finet",expectedResult);
       }
       catch(ComparisonFailure e){
         System.err.println("assertequals fail");
