@@ -55,6 +55,8 @@ public class RouterPatchInformation{
 
 			else{
 				finalResult = finalResult + " [" + this.notes + "]";
+
+				System.out.println(finalResult);
 			}
 
 		return finalResult;

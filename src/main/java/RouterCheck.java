@@ -36,6 +36,7 @@ public class RouterCheck{
 	}
 		
 	public static String beginRouterCheck(String filename){
+		String finalResult = "";
 
 		//Declarations to be used later on: examples
 		ArrayList<String> inputLines = new ArrayList<String>(); // ["d.example.com,1.1.1.4,yes,14","c.example.com,1.1.1.5,no,12,Case a bit loose"]
@@ -57,7 +58,6 @@ public class RouterCheck{
 		catch(Exception ex){
 			System.out.println("File could not be read");
 		}
-
 
 		//Precompute ipaddresses & hostnames dictionaries with values equal to the number of occurences.
 		HashMap<String,Integer> hostnames = getAllElementsFromArrayAtIndex(0, inputLines);
@@ -109,21 +109,36 @@ public class RouterCheck{
 
 			i=i+1;
 
+			int updateCounter = 0;
 			if(updateRequired && illegalInput == false){
 
-				String finalResult = linesRouterPatchInfo.printRouterPatchInformation();
+				String result = linesRouterPatchInfo.printRouterPatchInformation();
 
-				return finalResult;
+				if(updateCounter==0){
+					finalResult = finalResult + result;
+				}
+
+				else{
+					finalResult = finalResult + result;
+				}
 				
-			}
-
-			else{
-				return "No results";
+				updateCounter = updateCounter + 1;
+				
 			}
 
 		}
 
-		return "No results";
+		//System.out.println(finalResult);
+
+		if(finalResult.equals("")){
+			return "No results";
+		}
+
+		else{ 
+			return finalResult;
+		}
+
+		
 		
 	}
 
