@@ -13,19 +13,15 @@ import java.util.HashMap;
 
 public class RouterCheck{
 
+	//Constructor to add a fileName for testing purposes.
+	RouterCheck(){
+
+	}
+
 	//Main where program execution begins
 	public static void main(String args[]){
-		
-		//Declarations to be used later on: examples
-		String filename = ""; // something.csv
-		ArrayList<String> inputLines = new ArrayList<String>(); // ["d.example.com,1.1.1.4,yes,14","c.example.com,1.1.1.5,no,12,Case a bit loose"]
 
-		//Store results of boolean validation tests for each line
-		ArrayList<RouterUpdateChecker> linesAsBooleans = new ArrayList<RouterUpdateChecker>();
-
-		//Store information associated with a given line
-		ArrayList<RouterPatchInformation> linesAsInformation = new ArrayList<RouterPatchInformation>();
-
+		String filename = "";
 		//Check if there are command line arguments
 		if(args.length == 0){
 			System.out.println("Please supply some arguments to the program");
@@ -35,6 +31,20 @@ public class RouterCheck{
 		else{
 			filename = args[0];
 		}
+
+		beginRouterCheck(filename);
+	}
+		
+	public static String beginRouterCheck(String filename){
+
+		//Declarations to be used later on: examples
+		ArrayList<String> inputLines = new ArrayList<String>(); // ["d.example.com,1.1.1.4,yes,14","c.example.com,1.1.1.5,no,12,Case a bit loose"]
+
+		//Store results of boolean validation tests for each line
+		ArrayList<RouterUpdateChecker> linesAsBooleans = new ArrayList<RouterUpdateChecker>();
+
+		//Store information associated with a given line
+		ArrayList<RouterPatchInformation> linesAsInformation = new ArrayList<RouterPatchInformation>();
 
 		//System.out.println(filename);
 
@@ -91,21 +101,30 @@ public class RouterCheck{
 				//System.out.println("Update required(no errors):" + updateRequired);
 			}
 
-			RouterPatchInformation linesRouterPatchInfo= thisLinesValidationChecker.getRouterPatchInfo();
+			RouterPatchInformation linesRouterPatchInfo = thisLinesValidationChecker.getRouterPatchInfo();
 
 			linesAsInformation.add(linesRouterPatchInfo);
 
 			//Only prints the lines which need an update and are not full of illegalInputs
 
-			if(updateRequired && illegalInput == false){
-
-				linesRouterPatchInfo.printRouterPatchInformation();
-
-			}
-
 			i=i+1;
 
+			if(updateRequired && illegalInput == false){
+
+				String finalResult = linesRouterPatchInfo.printRouterPatchInformation();
+
+				return finalResult;
+				
+			}
+
+			else{
+				return "No results";
+			}
+
 		}
+
+		return "No results";
+		
 	}
 
 	//Returns a hashmap of hostname/ipaddress and a count of the number of times that element occurs.

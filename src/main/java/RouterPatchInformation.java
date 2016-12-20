@@ -44,16 +44,20 @@ public class RouterPatchInformation{
 	// 	return this.notes;
 	// }
 
-	public void printRouterPatchInformation(){
+	public String printRouterPatchInformation(){
+
+		String finalResult = this.hostname + " (" + this.ipaddress + "), " + "OS version " + this.osversion;
 
 			if(notes.equals("")){
-				System.out.println(this.hostname + " (" + this.ipaddress + "), " + "OS version " + this.osversion);
+
+				System.out.println(finalResult);
 			}
 
 			else{
-				System.out.println(this.hostname + " (" + this.ipaddress + "), " + "OS version " + this.osversion + " [" + this.notes + "]");
+				finalResult = finalResult + " [" + this.notes + "]";
 			}
 
+		return finalResult;
 			
 	}
 

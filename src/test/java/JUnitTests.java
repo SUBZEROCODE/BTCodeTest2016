@@ -1,32 +1,33 @@
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import junit.framework.TestCase;
 
-public class UnitTests{
+public class JUnitTests extends TestCase{
+
+        public JUnitTests(String name) {
+                super( name );
+        }
+
+        public void testSeriousness() throws Exception {
+                assertTrue( true );
+                
+        }
 	
-	public static void runtests(){
+	// public static void runtests() throws Exception{
 
-		Boolean test1Result = junitTest1();
+	//  	junitTest1();
 
-	}
+	// }
 
-      @Test
-	public static Boolean junitTest1(){
+	// public static void junitTest1() throws Exception{
 
-	     String expectedResult = "Junit is working fine";
-            Boolean testResult =  assertEquals("Junit is working fine",str);
+ //            RouterCheck routerTest = new RouterCheck();
+ //            System.out.println(routerTest.beginRouterCheck("simpleTest.csv"));
 
-            if(testResult == true){
-      	     System.out.println("Tests passed");
-            }
+ //            assertTrue(true);
+ //      }
 
-            else{
-            	System.out.println("Failure in JUnit test 1");
-            }
+ //      public static void junitTest2() throws Exception{
 
-            System.out.println("Result of testing:" + result);
+ //      }
 
-            return result;
-
-      	}
 
 }
