@@ -15,9 +15,9 @@ public class JUnitTest extends TestCase{
 
 	}
 
-	public static void testOutput() throws Exception{
+	public void testOutput() throws Exception{
 
-            String systemResult = RouterCheck.beginRouterCheck("sampleTests.csv");
+            String systemResult = RouterCheck.beginRouterCheck(getClass().getResource("sampleTests.csv").getFile());
 
             String expectedResult = "b.example.com (1.1.1.2), OS version 13 [Behind the other routers so no one sees it]f.example.com (1.1.1.7), OS version 12.200";
 
