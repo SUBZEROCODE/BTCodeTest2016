@@ -11,21 +11,21 @@ public class JUnitTest extends TestCase{
       	
 	public static void testJunit() throws Exception{
 
-	 	assertEquals("HI","HI");
-
+	 	assertEquals("TEST_JUNIT","TEST_JUNIT");
 	}
 
 	public void testOutput() throws Exception{
 
             String systemResult = RouterCheck.beginRouterCheck(getClass().getResource("sampleTests.csv").getFile());
-
             String expectedResult = "b.example.com (1.1.1.2), OS version 13 [Behind the other routers so no one sees it]f.example.com (1.1.1.7), OS version 12.200";
 
             assertEquals(expectedResult, systemResult );
       }
 
+      public moreDifficultOutput() throws Exception
+
       // public static void testRead() throws Exception{
-      //       ArrayList<String> readResult = IOOperations.readFile("C:/Users/Sean/Documents/GitHub/BTCodeTest2016/src/main/java/sampleTests.csv");
+      //       ArrayList<String> readResult = IOOperations.readFile(getClass().getResource("sampleTests.csv").getFile());
 
       //       ArrayList<String> readTest = new ArrayList<String>();
 

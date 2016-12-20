@@ -4,6 +4,6 @@ something.com,1.1.1.7,no,12,Something interesting note
 something.com,1.1.1.7,no,12,Something interesting note 2
 yourthing.com,1.1.1.10,no,12,A note
 yourthing.com,1.1.1.9,no,12,Important note
-difficult.com,2,no,12,Difficult
+difficult.com,2,no,12,Difficult tests
 challenge.com,2.2.2.2,nope,12,Works now
-largerchallenge.com,3.3.3.3,yep,12,This won't work
+largerchallenge.com,3.3.3.3,yep,12,Other affirmative text such as 'yep' won't work
