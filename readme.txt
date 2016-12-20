@@ -13,3 +13,9 @@ Note: There are 4 Java classes- I split program execution for modularity/readabi
 
 OR Run sample tests by using "mvn test" (maven test build).
 
+Additional information:
+
+I have experimented with the Continous Integration tool "Travis CI" to test a Java 8 linux platform online.
+
+I have integrated my knowledge of Maven and also JUnit to perform some unit tests and add dependancies.
+
